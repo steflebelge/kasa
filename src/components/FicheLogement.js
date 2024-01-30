@@ -24,6 +24,8 @@ function FicheLogement() {
                 <p>{logementEnCours.title}</p>
                 <p>{logementEnCours.cover}</p>
                 <p>{logementEnCours.description}</p>
+                <p>{logementEnCours.rating}</p>
+                <p>{logementEnCours.location}</p>
             </>
         ) : (
             <p>logement non dispo</p>

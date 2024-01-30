@@ -1,0 +1,10 @@
+@import "colors";
+
+section#about{
+  & > img{
+    width: 100%;
+    max-height: 223px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+}

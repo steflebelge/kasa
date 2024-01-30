@@ -24,6 +24,7 @@ section#home {
   & > div#listeLogements {
     display: flex;
     padding: 50px;
+    margin: 45px 0;
     background-color: $gray;
     border-radius: 25px;
     flex-wrap: wrap;

@@ -1,0 +1,31 @@
+/* line 3, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/listeDeroulante.scss */
+div.listeDeroulante {
+  min-width: 335px;
+  max-width: 1023px;
+  background-color: #FF6060;
+}
+
+/* line 8, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/listeDeroulante.scss */
+div.listeDeroulante > p {
+  color: #fff;
+  padding: 15px;
+}
+
+/* line 11, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/listeDeroulante.scss */
+div.listeDeroulante > p:hover {
+  cursor: pointer;
+}
+
+/* line 15, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/listeDeroulante.scss */
+div.listeDeroulante > p img {
+  float: right;
+  width: 32px;
+  height: 32px;
+}
+
+/* line 20, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/listeDeroulante.scss */
+div.listeDeroulante > p img.reverse {
+  transform: rotate(180deg);
+}
+
+/*# sourceMappingURL=listeDeroulante.css.map */

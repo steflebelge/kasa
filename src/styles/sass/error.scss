@@ -1,0 +1,22 @@
+@import "colors";
+
+section#error{
+  text-align: center;
+  padding-bottom: 139px;
+
+  h1{
+    font-weight: bold;
+    font-size: 288px;
+    margin: 0;
+  }
+
+  h2{
+    font-size: 36px;
+    margin: 139px 0;
+  }
+
+  a{
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}

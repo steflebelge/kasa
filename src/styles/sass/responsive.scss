@@ -1,3 +1,22 @@
+@import "colors";
+
+@media screen and (max-width: 700px) {
+  section#error{
+    h1{
+      font-size: 96px;
+    }
+
+    h2{
+      font-size: 18px;
+      margin: 70px 0;
+    }
+
+    a{
+      font-size: 14px;
+    }
+  }
+}
+
 @media screen and (max-width: 525px) {
   header,
   section {
@@ -18,9 +37,22 @@
     }
   }
 
-  section#home span {
-    & > p {
-      font-size: 24px;
+  section#home {
+    span {
+      & > p {
+        font-size: 24px;
+        padding: 40px 15px;
+        text-align: left;
+      }
+    }
+    div#listeLogements{
+      padding: 22px 0;
+      gap: 20px;
+      background-color: $transparent;
+
+      div.cardLogement{
+        width: 100%;
+      }
     }
   }
 

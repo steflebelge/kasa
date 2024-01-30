@@ -26,10 +26,15 @@ section#home {
     padding: 50px;
     background-color: $gray;
     border-radius: 25px;
+    flex-wrap: wrap;
+    gap: 55px;
+    justify-content: space-between;
 
     div.cardLogement{
-      width: 30%;
+      width: 29%;
       max-width: 340px;
+      min-width: 255px;
+      margin: auto;
       max-height: 340px;
       min-height: 255px;
       background-color: $red;
@@ -37,11 +42,20 @@ section#home {
       background-image: linear-gradient(to top, $black, $transparent);
       background-position-y: 125px;
       background-repeat: no-repeat;
+      position: relative;
 
-      p{
+      &:hover{
+        cursor: pointer;
+      }
+
+      a{
         margin:0;
         padding: 20px;
         color: $white;
+        position: absolute;
+        bottom: 0;
+        max-width: 60%;
+        font-size: 18px;
       }
     }
   }

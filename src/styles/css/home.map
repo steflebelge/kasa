@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "home.css",
+	"sources": [
+		"../sass/home.scss",
+		"../sass/colors.scss"
+	],
+	"sourcesContent": [
+		"@import \"colors\";\r\n\r\nsection#home {\r\n  & > span {\r\n    border-radius: 25px;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: cover;\r\n    width: 100%;\r\n    display: block;\r\n\r\n\r\n    & > p {\r\n      margin: 0;\r\n      text-align: center;\r\n      color: $white;\r\n      font-size: 48px;\r\n      border-radius: 25px;\r\n      background-color: #0000004a;\r\n      padding: 78px 0;\r\n    }\r\n  }\r\n\r\n  & > div#listeLogements {\r\n    display: flex;\r\n    padding: 50px;\r\n    background-color: $gray;\r\n    border-radius: 25px;\r\n\r\n    div.cardLogement{\r\n      width: 30%;\r\n      max-width: 340px;\r\n      max-height: 340px;\r\n      min-height: 255px;\r\n      background-color: $red;\r\n      border-radius: 10px;\r\n      background-image: linear-gradient(to top, $black, $transparent);\r\n      background-position-y: 125px;\r\n      background-repeat: no-repeat;\r\n\r\n      p{\r\n        margin:0;\r\n        padding: 20px;\r\n        color: $white;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+		"\r\n$red: #FF6060;\r\n$gray: #F6F6F6;\r\n$black: #000;\r\n$white: #fff;\r\n$transparent: #f000;\r\n"
+	],
+	"names": [],
+	"mappings": ";AAEA,AACE,OADK,AAAA,KAAK,GACN,IAAI,CAAC;EACP,aAAa,EAAE,IAAI;EACnB,iBAAiB,EAAE,SAAS;EAC5B,mBAAmB,EAAE,MAAM;EAC3B,eAAe,EAAE,KAAK;EACtB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;CAYf;;;AAnBH,AAUI,OAVG,AAAA,KAAK,GACN,IAAI,GASF,CAAC,CAAC;EACJ,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,MAAM;EAClB,KAAK,ECXH,IAAI;EDYN,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,IAAI;EACnB,gBAAgB,EAAE,SAAS;EAC3B,OAAO,EAAE,MAAM;CAChB;;;AAlBL,AAqBE,OArBK,AAAA,KAAK,GAqBN,GAAG,AAAA,eAAe,CAAC;EACrB,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,IAAI;EACb,gBAAgB,ECxBb,OAAO;EDyBV,aAAa,EAAE,IAAI;CAmBpB;;;AA5CH,AA2BI,OA3BG,AAAA,KAAK,GAqBN,GAAG,AAAA,eAAe,CAMpB,GAAG,AAAA,aAAa,CAAA;EACd,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,KAAK;EAChB,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,KAAK;EACjB,gBAAgB,ECjChB,OAAO;EDkCP,aAAa,EAAE,IAAI;EACnB,gBAAgB,EAAE,oCAA6C;EAC/D,qBAAqB,EAAE,KAAK;EAC5B,iBAAiB,EAAE,SAAS;CAO7B;;;AA3CL,AAsCM,OAtCC,AAAA,KAAK,GAqBN,GAAG,AAAA,eAAe,CAMpB,GAAG,AAAA,aAAa,CAWd,CAAC,CAAA;EACC,MAAM,EAAC,CAAC;EACR,OAAO,EAAE,IAAI;EACb,KAAK,ECvCL,IAAI;CDwCL"
+}

@@ -1,6 +1,22 @@
+import "../styles/css/header.css";
+import logo from "../assets/img/logo.png";
+import { Link, useLocation } from 'react-router-dom'
+
 function Header() {
+    const location = useLocation();
+
     return (
-        <h1>Header</h1>
+        <header>
+            <img src={logo} alt="Logo Kasa"/>
+            <nav>
+                <Link className={location.pathname === "/"
+                    ? "selected"
+                    : ""} to="/">Accueil</Link>
+                <Link className={location.pathname === "/About"
+                    ? "selected"
+                    : ""} to="/About">A propos</Link>
+            </nav>
+        </header>
     );
 }
 

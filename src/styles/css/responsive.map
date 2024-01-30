@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "responsive.css",
+	"sources": [
+		"../sass/responsive.scss"
+	],
+	"sourcesContent": [
+		"@media screen and (max-width: 525px) {\r\n  header,\r\n  section {\r\n    width: 95%;\r\n  }\r\n\r\n  header {\r\n    padding: 27px 0;\r\n\r\n    img {\r\n      max-width: 115px;\r\n    }\r\n\r\n\r\n    nav a {\r\n      text-transform: uppercase;\r\n      font-size: 12px;\r\n    }\r\n  }\r\n\r\n  section#home span {\r\n    & > p {\r\n      font-size: 24px;\r\n    }\r\n  }\r\n\r\n  footer p {\r\n    font-size: 12px;\r\n    max-width: 150px;\r\n  }\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;;EACjC,AAAA,MAAM;EACN,OAAO,CAAC;IACN,KAAK,EAAE,GAAG;GACX;;EAED,AAAA,MAAM,CAAC;IACL,OAAO,EAAE,MAAM;GAWhB;;EAZD,AAGE,MAHI,CAGJ,GAAG,CAAC;IACF,SAAS,EAAE,KAAK;GACjB;;EALH,AAQE,MARI,CAQJ,GAAG,CAAC,CAAC,CAAC;IACJ,cAAc,EAAE,SAAS;IACzB,SAAS,EAAE,IAAI;GAChB;;EAGH,AACE,OADK,AAAA,KAAK,CAAC,IAAI,GACX,CAAC,CAAC;IACJ,SAAS,EAAE,IAAI;GAChB;;EAGH,AAAA,MAAM,CAAC,CAAC,CAAC;IACP,SAAS,EAAE,IAAI;IACf,SAAS,EAAE,KAAK;GACjB"
+}

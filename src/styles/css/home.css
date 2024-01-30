@@ -1,0 +1,50 @@
+/* line 4, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/home.scss */
+section#home > span {
+  border-radius: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  display: block;
+}
+
+/* line 13, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/home.scss */
+section#home > span > p {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  border-radius: 25px;
+  background-color: #0000004a;
+  padding: 78px 0;
+}
+
+/* line 24, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/home.scss */
+section#home > div#listeLogements {
+  display: flex;
+  padding: 50px;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+}
+
+/* line 30, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/home.scss */
+section#home > div#listeLogements div.cardLogement {
+  width: 30%;
+  max-width: 340px;
+  max-height: 340px;
+  min-height: 255px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #000, #f000);
+  background-position-y: 125px;
+  background-repeat: no-repeat;
+}
+
+/* line 41, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/home.scss */
+section#home > div#listeLogements div.cardLogement p {
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=home.css.map */

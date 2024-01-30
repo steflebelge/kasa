@@ -7,19 +7,21 @@ import FicheLogement from "./components/FicheLogement";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import "./styles/css/index.css";
+import "./styles/css/responsive.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <Header/>
         <Router>
+            <Header/>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/ficheLogement/:idLogement" element={<FicheLogement />} />
-                <Route path="/About" element={<About />} />
-                <Route path="*" element={<Error />} />
+                <Route path="/" element={<Home/>}/>
+                <Route path="/ficheLogement/:idLogement" element={<FicheLogement/>}/>
+                <Route path="/About" element={<About/>}/>
+                <Route path="*" element={<Error/>}/>
             </Routes>
+            <Footer/>
         </Router>
-        <Footer/>
     </React.StrictMode>
 );

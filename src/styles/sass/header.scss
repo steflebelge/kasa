@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+
+  nav{
+    gap: 35px;
+    display: flex;
+
+    a{
+      &:hover,
+      &.selected{
+        text-decoration: underline;
+      }
+
+      &.selected{
+        pointer-events: none;
+      }
+    }
+  }
+}

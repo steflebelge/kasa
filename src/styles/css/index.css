@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("/src/assets/fonts/Montserrat/static/Montserrat-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 11, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+* {
+  color: #FF6060;
+  font-family: Montserrat-Medium, serif;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 20, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+body {
+  margin: 0;
+}
+
+/* line 23, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+body div#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 28, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+body div#root header,
+body div#root section {
+  width: 90%;
+  margin: auto;
+}
+
+/* line 33, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+body div#root section {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=index.css.map */

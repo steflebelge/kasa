@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "footer.css",
+	"sources": [
+		"../sass/footer.scss",
+		"../sass/colors.scss"
+	],
+	"sourcesContent": [
+		"@import \"colors\";\r\n\r\nfooter {\r\n  display: flex;\r\n  flex-direction: column;\r\n  background-color: $black;\r\n  height: 200px;\r\n  justify-content: center;\r\n  align-items: center;\r\n\r\n  img{\r\n    width: 122px;\r\n  }\r\n\r\n  p{\r\n    color: $white;\r\n    text-align: center;\r\n  }\r\n}\r\n",
+		"\r\n$red: #FF6060;\r\n$gray: #F6F6F6;\r\n$black: #000;\r\n$white: #fff;\r\n$transparent: #f000;\r\n"
+	],
+	"names": [],
+	"mappings": ";AAEA,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,gBAAgB,ECFV,IAAI;EDGV,MAAM,EAAE,KAAK;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAUpB;;;AAhBD,AAQE,MARI,CAQJ,GAAG,CAAA;EACD,KAAK,EAAE,KAAK;CACb;;;AAVH,AAYE,MAZI,CAYJ,CAAC,CAAA;EACC,KAAK,ECXD,IAAI;EDYR,UAAU,EAAE,MAAM;CACnB"
+}

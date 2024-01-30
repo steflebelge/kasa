@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "header.css",
+	"sources": [
+		"../sass/header.scss"
+	],
+	"sourcesContent": [
+		"header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 50px 0;\r\n\r\n  nav{\r\n    gap: 35px;\r\n    display: flex;\r\n\r\n    a{\r\n      &:hover,\r\n      &.selected{\r\n        text-decoration: underline;\r\n      }\r\n\r\n      &.selected{\r\n        pointer-events: none;\r\n      }\r\n    }\r\n  }\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,MAAM;CAiBhB;;;AArBD,AAME,MANI,CAMJ,GAAG,CAAA;EACD,GAAG,EAAE,IAAI;EACT,OAAO,EAAE,IAAI;CAYd;;;AApBH,AAWM,MAXA,CAMJ,GAAG,CAID,CAAC,AACE,MAAM,EAXb,MAAM,CAMJ,GAAG,CAID,CAAC,AAEE,SAAS,CAAA;EACR,eAAe,EAAE,SAAS;CAC3B;;;AAdP,AAgBM,MAhBA,CAMJ,GAAG,CAID,CAAC,AAME,SAAS,CAAA;EACR,cAAc,EAAE,IAAI;CACrB"
+}

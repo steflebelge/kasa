@@ -1,0 +1,48 @@
+@import "colors";
+
+section#home {
+  & > span {
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: block;
+
+
+    & > p {
+      margin: 0;
+      text-align: center;
+      color: $white;
+      font-size: 48px;
+      border-radius: 25px;
+      background-color: #0000004a;
+      padding: 78px 0;
+    }
+  }
+
+  & > div#listeLogements {
+    display: flex;
+    padding: 50px;
+    background-color: $gray;
+    border-radius: 25px;
+
+    div.cardLogement{
+      width: 30%;
+      max-width: 340px;
+      max-height: 340px;
+      min-height: 255px;
+      background-color: $red;
+      border-radius: 10px;
+      background-image: linear-gradient(to top, $black, $transparent);
+      background-position-y: 125px;
+      background-repeat: no-repeat;
+
+      p{
+        margin:0;
+        padding: 20px;
+        color: $white;
+      }
+    }
+  }
+}

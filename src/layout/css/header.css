@@ -1,1 +1,0 @@
-header{display:flex;justify-content:space-between;align-items:center;padding:50px 0}header nav{gap:35px;display:flex}header nav a:hover,header nav a.selected{text-decoration:underline}header nav a.selected{pointer-events:none}

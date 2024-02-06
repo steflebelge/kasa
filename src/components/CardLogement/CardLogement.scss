@@ -1,0 +1,55 @@
+@import "src/styles/sass/colors";
+
+div.cardLogement{
+  width: 29%;
+  min-width: 255px;
+  margin: auto;
+  max-height: 340px;
+  min-height: 255px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &:hover{
+    cursor: pointer;
+
+    span.backLinear {
+      background-position-y: 120px;
+    }
+
+    img{
+      width: 103%;
+      height: 103%;
+    }
+  }
+
+  span.backLinear{
+    background-position-y: 60px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to top, $black, $transparent);
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  img{
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  a{
+    z-index: 15;
+    margin:0;
+    padding: 20px;
+    color: $white;
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+    max-width: 60%;
+  }
+}

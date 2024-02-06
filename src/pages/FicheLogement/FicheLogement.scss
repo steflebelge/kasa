@@ -1,0 +1,130 @@
+@import "../../styles/sass/colors";
+
+
+section#ficheLogement{
+  div:not(.loader){
+    display: inline-block;
+  }
+  div.slider{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 30px;
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      font-size: 35px;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    .numbertext {
+      color: #f2f2f2;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 25px;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .mySlides {display: none}
+    img {
+      vertical-align: middle;
+      height: 415px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+    }
+  }
+
+  div.infosLogement{
+    width: 80%;
+
+    h1{
+      font-size: 36px;
+      margin: 0;
+      max-width: 90%;
+    }
+    p{
+      font-size: 18px;
+    }
+
+    span.listeTags{
+      display: flex;
+      gap: 10px;
+
+      p{
+        font-size: 14px;
+        color: $white;
+        padding: 3px 30px;
+        background-color: $red;
+        border-radius: 10px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  div.infosLoueur{
+    width: 20%;
+    text-align: right;
+    vertical-align: top;
+
+    p{
+      display: inline-block;
+      vertical-align: top;
+      max-width: min-content;
+      margin-right: 5px;
+      margin-top: 0;
+    }
+
+    img{
+      display: inline-block;
+      max-height: 64px;
+      max-width: 64px;
+      border-radius: 50%;
+      margin-left: 5px;
+      vertical-align: top;
+    }
+
+    p#rating{
+      display: flex;
+      img{
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+      }
+    }
+  }
+
+  div.description,
+  div.equipement{
+    width: 45%;
+
+    div.listeDeroulante{
+      width: 100%;
+    }
+  }
+
+  div.equipement{
+    float: right;
+
+    p.equipement{
+      line-height: 0;
+    }
+  }
+}

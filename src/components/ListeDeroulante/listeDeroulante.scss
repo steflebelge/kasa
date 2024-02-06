@@ -1,0 +1,44 @@
+@import "../../styles/sass/colors";
+
+div.listeDeroulante{
+  width: 80%;
+  background-color: $red;
+  margin: auto;
+  margin-top: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  & > p:not(.equipement){
+    margin: 0;
+    color: $white;
+    padding: 15px;
+    &:hover{
+      cursor: pointer;
+    }
+
+    img{
+      float: right;
+      width: 32px;
+      height: 32px;
+
+      &.reverse{
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  & > p.equipement{
+    background-color: $gray;
+    margin: 0;
+    color: $red;
+    padding: 20px;
+    font-size: 18px;
+
+    &:nth-child(2){
+      padding-top: 40px;
+    }
+    &:last-child{
+      padding-bottom: 40px;
+    }
+  }
+}

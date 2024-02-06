@@ -1,6 +1,6 @@
 import backgroundImgTwo from "../assets/img/backgroundImgTwo.png";
 import "../styles/css/about.css";
-import ListeDeroulante from "./ListeDeroulante";
+import ListeDeroulante from "../components/ListeDeroulante";
 
 function About() {
     return (

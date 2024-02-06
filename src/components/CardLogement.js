@@ -7,7 +7,6 @@ function CardLogement({id, title, cover}) {
         window.location.href = window.location.origin + "/ficheLogement/" + id;
     }
 
-    debugger
     return (
         <div
             onClick={() => handleClick(id)}

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Home from "./components/Home";
-import Error from "./components/Error";
-import FicheLogement from "./components/FicheLogement";
-import About from "./components/About";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import FicheLogement from "./pages/FicheLogement";
+import About from "./pages/About";
+import Footer from "./layout/Footer";
+import Header from "./layout/Header";
 import "./styles/css/index.css";
 import "./styles/css/responsive.css";
 

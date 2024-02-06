@@ -13,28 +13,29 @@
   font-size: 24px;
   font-weight: normal;
   font-style: normal;
+  transition-duration: 250ms;
 }
 
-/* line 20, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+/* line 22, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
 body {
   margin: 0;
 }
 
-/* line 23, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+/* line 25, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
 body div#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* line 28, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+/* line 30, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
 body div#root header,
 body div#root section {
   width: 90%;
   margin: auto;
 }
 
-/* line 33, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
+/* line 35, ../../Nextcloud/Administratif/Social/Gualandi Stefan/alternance/partageMentor/projet11/kasa/src/styles/sass/index.scss */
 body div#root section {
   flex-grow: 1;
 }

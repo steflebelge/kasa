@@ -15,6 +15,7 @@ function Home() {
                         key={`${logementTmp.id}`}
                         id={`${logementTmp.id}`}
                         title={`${logementTmp.title}`}
+                        cover={`${logementTmp.cover}`}
                     />
                 ))}
             </div>

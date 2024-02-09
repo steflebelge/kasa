@@ -2,22 +2,18 @@ import "./home.scss";
 import backgroundImgOne from "../../assets/img/backgroundImgOne.png";
 import CardLogement from "../../components/CardLogement/CardLogement";
 import {useEffect, useState} from "react";
-import data from "../../data/logements.json";
+import {fetchUrl} from "../../utils/tools";
 
 function Home() {
-    // const [data, setData] = useState(null);
+    const [data, setData] = useState(null);
 
     //au chargement de la page, on fetch le json pour revcuperer la data
-    // useEffect(() => {
-    //     fetch("logements.json")
-    //         .then(tmp => {
-    //             debugger
-    //         })
-    //         .catch(err => {
-    //             debugger
-    //             window.location.href = window.location.origin + "/error";
-    //         });
-    // }, []);
+    useEffect(() => {
+        fetchUrl("/logements.json")
+            .then(tmp => {
+                setData(tmp);
+            });
+    }, []);
 
     return (
         <section id={"home"}>

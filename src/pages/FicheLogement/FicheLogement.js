@@ -1,12 +1,13 @@
 import {useParams} from 'react-router-dom'
-import data from "../../data/logements.json";
 import {useEffect, useState} from "react";
 import ListeDeroulante from "../../components/ListeDeroulante/ListeDeroulante";
 import "./FicheLogement.scss";
 import startFull from "../../assets/img/starFull.png";
 import startEmpty from "../../assets/img/startEmpty.png";
+import {fetchUrl} from "../../utils/tools"
 
 function FicheLogement() {
+    const [data, setData] = useState(null);
     const [logementEnCours, setLogementEnCours] = useState(null);
     const [slideIndex, setSlideIndex] = useState(null);
     const {idLogement} = useParams();
@@ -14,16 +15,24 @@ function FicheLogement() {
     //recup data du logement au 1er render
     //si aucun logement avec cet id => error
     useEffect(() => {
-        let res = data.find(logementTmp => logementTmp.id === idLogement);
-        if (!res)
-            window.location.href = window.location.origin + "/error";
-
-        setLogementEnCours(res);
-        setSlideIndex(1);
+        fetchUrl("/logements.json")
+            .then(tmp => {
+                setData(tmp);
+            });
     }, []);
 
     useEffect(() => {
-        debugger
+        if(data && !logementEnCours) {
+            let res = data.find(logementTmp => logementTmp.id === idLogement);
+            if (!res)
+                window.location.href = window.location.origin + "/error";
+
+            setLogementEnCours(res);
+            setSlideIndex(1);
+        }
+    }, [data]);
+
+    useEffect(() => {
         let i;
         let slides = document.getElementsByClassName("mySlides");
         if(slideIndex === null || slides.length === 0)

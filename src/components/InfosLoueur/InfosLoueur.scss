@@ -1,0 +1,23 @@
+
+div.infosLoueur{
+  width: min-content;
+  text-align: right;
+  float: right;
+
+  p:not(#rating){
+    display: inline-block;
+    vertical-align: top;
+    max-width: min-content;
+    margin-right: 5px;
+    margin-top: 0;
+  }
+
+  img{
+    display: inline-block;
+    max-height: 64px;
+    max-width: 64px;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: top;
+  }
+}

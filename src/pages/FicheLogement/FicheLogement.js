@@ -3,8 +3,9 @@ import {useEffect, useState} from "react";
 import ListeDeroulante from "../../components/ListeDeroulante/ListeDeroulante";
 import "./FicheLogement.scss";
 import {fetchUrl} from "../../utils/tools"
-import Tag from "../../components/Tag/Tag";
-import Rating from "../../components/Rating/Rating";
+import Slider from "../../components/Slider/Slider";
+import InfosLogement from "../../components/InfosLogement/InfosLogement";
+import InfosLoueur from "../../components/InfosLoueur/InfosLoueur";
 
 function FicheLogement() {
     const [data, setData] = useState(null);
@@ -33,70 +34,24 @@ function FicheLogement() {
         }
     }, [data]);
 
-    useEffect(() => {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        if (slideIndex === null || slides.length === 0)
-            return
-        if (slideIndex > slides.length) {
-            setSlideIndex(1);
-            return
-        }
-        if (slideIndex < 1) {
-            setSlideIndex(slides.length);
-            return
-        }
-
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex - 1].style.display = "block";
-    }, [slideIndex]);
 
     return (
         <section id="ficheLogement">
             {logementEnCours ? (
                 <>
-                    <div className="slider">
-                        {logementEnCours.pictures.map((picTmp, index) => (
-                            <div key={index} className="mySlides fade">
-                                {logementEnCours.pictures.length > 1 && (
-                                    <div className="numbertext">{slideIndex} / {logementEnCours.pictures.length}</div>
-                                )}
+                    <Slider
+                        photos={logementEnCours.pictures}
+                        slideIndex={slideIndex}
+                    />
 
-                                <img src={picTmp}/>
-                            </div>
-                        ))}
-                        {logementEnCours.pictures.length > 1 && (
-                            <>
-                                <a className="prev" onClick={() => setSlideIndex(slideIndex - 1)}>❮</a>
-                                <a className="next" onClick={() => setSlideIndex(slideIndex + 1)}>❯</a>
-                            </>
-                        )}
-                    </div>
+                    <InfosLogement
+                        logement={logementEnCours}
+                    />
 
-                    <div className="infosLogement">
-                        <h1>{logementEnCours.title}</h1>
-                        <p>{logementEnCours.location}</p>
-                        {logementEnCours.tags && (
-                            <span className="listeTags">
-                                {logementEnCours.tags.map((tagTmp, index) => (
-                                    <Tag
-                                        key={index}
-                                        tag={tagTmp}
-                                    />
-                                ))}
-                            </span>
-                        )}
-                    </div>
-
-                    <div className="infosLoueur">
-                        <p>{logementEnCours.host.name}</p>
-                        <img src={logementEnCours.host.picture} alt=""/>
-                        <Rating
-                            nbEtoiles={logementEnCours.rating}
-                        />
-                    </div>
+                    <InfosLoueur
+                        hote={logementEnCours.host}
+                        rating={logementEnCours.rating}
+                    />
 
                     <span>
                         <div className="description">

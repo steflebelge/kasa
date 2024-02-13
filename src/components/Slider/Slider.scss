@@ -1,0 +1,47 @@
+div.slider{
+  transition-duration: 0s !important;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 30px;
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    font-size: 35px;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .numbertext {
+    color: #f2f2f2;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .mySlides {display: none}
+  img {
+    vertical-align: middle;
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+}

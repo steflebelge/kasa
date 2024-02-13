@@ -1,0 +1,13 @@
+@import "../../styles/sass/colors";
+
+div.infosLogement{
+  h1{
+    font-size: 36px;
+    margin: 0;
+    max-width: 90%;
+  }
+  & > p{
+    font-size: 18px;
+    color: $black;
+  }
+}

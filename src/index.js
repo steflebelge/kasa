@@ -27,7 +27,8 @@ root.render(
     </React.StrictMode>
 );
 
-//? fonts
-//fetch
-//chargement fichelogement slider
 //responsive
+//composants guide des etapes ?
+//ratings mauvais endroit
+// composant carousseul, rating, tag,
+

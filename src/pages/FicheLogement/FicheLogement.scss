@@ -2,10 +2,12 @@
 
 
 section#ficheLogement{
+
   div:not(.loader){
     display: inline-block;
   }
   div.slider{
+    transition-duration: 0s !important;
     width: 100%;
     position: relative;
     margin: auto;
@@ -62,6 +64,7 @@ section#ficheLogement{
     }
     p{
       font-size: 18px;
+      color: $black;
     }
 
     span.listeTags{
@@ -103,6 +106,8 @@ section#ficheLogement{
 
     p#rating{
       display: flex;
+      float: right;
+
       img{
         width: 25px;
         height: 25px;

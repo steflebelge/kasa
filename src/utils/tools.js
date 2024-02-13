@@ -11,14 +11,12 @@ function fetchUrl(url){
                 })
                 .catch(err => {
                     console.log("erreur : " + err.toString());
-                    alert('Erreur : ' + err.toString());
-                    window.location.href = window.location.origin + "/error";
+                    throw err;
                 })
         })
         .catch(err => {
             console.log("erreur : " + err.toString());
-            alert('Erreur : ' + err.toString());
-            window.location.href = window.location.origin + "/error";
+            throw err;
         });
 }
 

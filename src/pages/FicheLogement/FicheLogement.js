@@ -1,4 +1,4 @@
-import {useParams} from 'react-router-dom'
+import {useParams, useNavigate } from 'react-router-dom'
 import {useEffect, useState} from "react";
 import ListeDeroulante from "../../components/ListeDeroulante/ListeDeroulante";
 import "./FicheLogement.scss";
@@ -11,6 +11,7 @@ function FicheLogement() {
     const [logementEnCours, setLogementEnCours] = useState(null);
     const [slideIndex, setSlideIndex] = useState(null);
     const {idLogement} = useParams();
+    const navigate = useNavigate();
 
     //recup data du logement au 1er render
     //si aucun logement avec cet id => error
@@ -22,10 +23,10 @@ function FicheLogement() {
     }, []);
 
     useEffect(() => {
-        if(data && !logementEnCours) {
+        if (data && !logementEnCours) {
             let res = data.find(logementTmp => logementTmp.id === idLogement);
             if (!res)
-                window.location.href = window.location.origin + "/error";
+                navigate("/error");
 
             setLogementEnCours(res);
             setSlideIndex(1);
@@ -35,7 +36,7 @@ function FicheLogement() {
     useEffect(() => {
         let i;
         let slides = document.getElementsByClassName("mySlides");
-        if(slideIndex === null || slides.length === 0)
+        if (slideIndex === null || slides.length === 0)
             return
         if (slideIndex > slides.length) {
             setSlideIndex(1);
@@ -49,7 +50,7 @@ function FicheLogement() {
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex-1].style.display = "block";
+        slides[slideIndex - 1].style.display = "block";
     }, [slideIndex]);
 
     function renderRating() {
@@ -69,14 +70,21 @@ function FicheLogement() {
             {logementEnCours ? (
                 <>
                     <div className="slider">
-                        {logementEnCours.pictures.map((picTmp, index) =>(
+                        {logementEnCours.pictures.map((picTmp, index) => (
                             <div key={index} className="mySlides fade">
-                                <div className="numbertext">{slideIndex} / {logementEnCours.pictures.length}</div>
+                                {logementEnCours.pictures.length > 1 && (
+                                    <div className="numbertext">{slideIndex} / {logementEnCours.pictures.length}</div>
+                                )}
+
                                 <img src={picTmp}/>
                             </div>
                         ))}
-                        <a className="prev" onClick={() => setSlideIndex(slideIndex - 1)}>❮</a>
-                        <a className="next" onClick={() => setSlideIndex(slideIndex + 1)}>❯</a>
+                        {logementEnCours.pictures.length > 1 && (
+                            <>
+                                <a className="prev" onClick={() => setSlideIndex(slideIndex - 1)}>❮</a>
+                                <a className="next" onClick={() => setSlideIndex(slideIndex + 1)}>❯</a>
+                            </>
+                        )}
                     </div>
 
                     <div className="infosLogement">
@@ -85,6 +93,7 @@ function FicheLogement() {
                         {logementEnCours.tags && (
                             <span className="listeTags">
                                 {logementEnCours.tags.map((tagTmp, index) => (
+                                    // <Tag></Tag>
                                     <p className="tag" key={index}>{tagTmp}</p>
                                 ))}
                             </span>

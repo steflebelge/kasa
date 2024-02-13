@@ -8,7 +8,6 @@ import InfosLogement from "../../components/InfosLogement/InfosLogement";
 import InfosLoueur from "../../components/InfosLoueur/InfosLoueur";
 
 function FicheLogement() {
-    const [data, setData] = useState(null);
     const [logementEnCours, setLogementEnCours] = useState(null);
     const [slideIndex, setSlideIndex] = useState(null);
     const {idLogement} = useParams();
@@ -19,21 +18,16 @@ function FicheLogement() {
     useEffect(() => {
         fetchUrl("/logements.json")
             .then(tmp => {
-                setData(tmp);
+                if (!logementEnCours) {
+                    let res = tmp.find(logementTmp => logementTmp.id === idLogement);
+                    if (!res)
+                        navigate("/error");
+
+                    setLogementEnCours(res);
+                    setSlideIndex(1);
+                }
             });
     }, []);
-
-    useEffect(() => {
-        if (data && !logementEnCours) {
-            let res = data.find(logementTmp => logementTmp.id === idLogement);
-            if (!res)
-                navigate("/error");
-
-            setLogementEnCours(res);
-            setSlideIndex(1);
-        }
-    }, [data]);
-
 
     return (
         <section id="ficheLogement">

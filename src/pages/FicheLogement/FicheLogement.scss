@@ -55,37 +55,22 @@ section#ficheLogement{
   }
 
   div.infosLogement{
-    width: 80%;
 
     h1{
       font-size: 36px;
       margin: 0;
       max-width: 90%;
     }
-    p{
+    & > p{
       font-size: 18px;
       color: $black;
-    }
-
-    span.listeTags{
-      display: flex;
-      gap: 10px;
-
-      p{
-        font-size: 14px;
-        color: $white;
-        padding: 3px 30px;
-        background-color: $red;
-        border-radius: 10px;
-        line-height: 25px;
-      }
     }
   }
 
   div.infosLoueur{
-    width: 20%;
+    width: min-content;
     text-align: right;
-    vertical-align: top;
+    float: right;
 
     p{
       display: inline-block;

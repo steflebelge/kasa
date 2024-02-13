@@ -29,6 +29,4 @@ root.render(
 
 //responsive
 //composants guide des etapes ?
-//ratings mauvais endroit
-// composant carousseul, rating, tag,
-
+//composant carousseul, rating, tag

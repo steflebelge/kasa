@@ -1,16 +1,13 @@
 import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import "./CardLogement.scss";
 
 function CardLogement({id, title, cover}) {
-
-    function handleClick(id) {
-        window.location.href = window.location.origin + "/ficheLogement/" + id;
-    }
+    const navigate = useNavigate();
 
     return (
         <div
-            onClick={() => handleClick(id)}
+            onClick={() => navigate("/ficheLogement/" + id)}
             className="cardLogement"
         >
             <span className="backLinear"></span>

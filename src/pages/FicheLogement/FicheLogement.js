@@ -5,6 +5,7 @@ import "./FicheLogement.scss";
 import startFull from "../../assets/img/starFull.png";
 import startEmpty from "../../assets/img/startEmpty.png";
 import {fetchUrl} from "../../utils/tools"
+import Tag from "../../components/Tag/Tag";
 
 function FicheLogement() {
     const [data, setData] = useState(null);
@@ -93,8 +94,10 @@ function FicheLogement() {
                         {logementEnCours.tags && (
                             <span className="listeTags">
                                 {logementEnCours.tags.map((tagTmp, index) => (
-                                    // <Tag></Tag>
-                                    <p className="tag" key={index}>{tagTmp}</p>
+                                    <Tag
+                                        key={index}
+                                        tag={tagTmp}
+                                    />
                                 ))}
                             </span>
                         )}

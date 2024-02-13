@@ -56,6 +56,14 @@
     }
   }
 
+  section#ficheLogement{
+    div.slider{
+      .numbertext{
+        display: none;
+      }
+    }
+  }
+
   section#about div.listeDeroulante{
     width: 100%;
   }

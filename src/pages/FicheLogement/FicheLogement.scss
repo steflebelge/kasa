@@ -55,7 +55,6 @@ section#ficheLogement{
   }
 
   div.infosLogement{
-
     h1{
       font-size: 36px;
       margin: 0;
@@ -72,7 +71,7 @@ section#ficheLogement{
     text-align: right;
     float: right;
 
-    p{
+    p:not(#rating){
       display: inline-block;
       vertical-align: top;
       max-width: min-content;
@@ -87,17 +86,6 @@ section#ficheLogement{
       border-radius: 50%;
       margin-left: 5px;
       vertical-align: top;
-    }
-
-    p#rating{
-      display: flex;
-      float: right;
-
-      img{
-        width: 25px;
-        height: 25px;
-        padding: 5px;
-      }
     }
   }
 
@@ -116,5 +104,9 @@ section#ficheLogement{
     p.equipement{
       line-height: 0;
     }
+  }
+
+  & > span{
+    display: block;
   }
 }

@@ -1,11 +1,10 @@
-import {useParams, useNavigate } from 'react-router-dom'
+import {useParams, useNavigate} from 'react-router-dom'
 import {useEffect, useState} from "react";
 import ListeDeroulante from "../../components/ListeDeroulante/ListeDeroulante";
 import "./FicheLogement.scss";
-import startFull from "../../assets/img/starFull.png";
-import startEmpty from "../../assets/img/startEmpty.png";
 import {fetchUrl} from "../../utils/tools"
 import Tag from "../../components/Tag/Tag";
+import Rating from "../../components/Rating/Rating";
 
 function FicheLogement() {
     const [data, setData] = useState(null);
@@ -54,18 +53,6 @@ function FicheLogement() {
         slides[slideIndex - 1].style.display = "block";
     }, [slideIndex]);
 
-    function renderRating() {
-        let startsResult = [];
-        for (let i = 0; i < 5; i++) {
-            let starTmp = {
-                src: i < parseInt(logementEnCours.rating) ? startFull : startEmpty,
-                key: i,
-            }
-            startsResult.push(starTmp);
-        }
-        return startsResult;
-    }
-
     return (
         <section id="ficheLogement">
             {logementEnCours ? (
@@ -106,28 +93,28 @@ function FicheLogement() {
                     <div className="infosLoueur">
                         <p>{logementEnCours.host.name}</p>
                         <img src={logementEnCours.host.picture} alt=""/>
-                        <p id="rating">
-                            {renderRating().map((starTmp) => (
-                                <img key={starTmp.key} src={starTmp.src} alt=""/>
-                            ))}
-                        </p>
-                    </div>
-
-                    <div className="description">
-                        <ListeDeroulante
-                            isOpen={false}
-                            title={"Description"}
-                            contenu={[logementEnCours.description]}
+                        <Rating
+                            nbEtoiles={logementEnCours.rating}
                         />
                     </div>
 
-                    <div className="equipement">
-                        <ListeDeroulante
-                            isOpen={false}
-                            title={"Equipement"}
-                            contenu={logementEnCours.equipments}
-                        />
-                    </div>
+                    <span>
+                        <div className="description">
+                            <ListeDeroulante
+                                isOpen={false}
+                                title={"Description"}
+                                contenu={[logementEnCours.description]}
+                            />
+                        </div>
+
+                        <div className="equipement">
+                            <ListeDeroulante
+                                isOpen={false}
+                                title={"Equipement"}
+                                contenu={logementEnCours.equipments}
+                            />
+                        </div>
+                    </span>
                 </>
 
             ) : (

@@ -12,8 +12,8 @@ function ListeDeroulante(props) {
         <div className="listeDeroulante">
             <p onClick={() => setIsOpen(!isOpen)}>{title}
                 {isOpen
-                    ? (<img className={"reverse"} src={arrow} alt=""/>)
-                    : (<img src={arrow} alt=""/>)
+                    ? (<img src={arrow} alt=""/>)
+                    : (<img className={"reverse"} src={arrow} alt=""/>)
                 }
             </p>
             {isOpen && contenu && (

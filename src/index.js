@@ -26,7 +26,3 @@ root.render(
         </Router>
     </React.StrictMode>
 );
-
-//responsive
-//composants guide des etapes ?
-//composant carousseul, rating, tag
